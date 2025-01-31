@@ -19,10 +19,20 @@ toggleButton.addEventListener("click", () => {
     }
 });
 
-const projectButtons = document.querySelectorAll('.bot-discord');
-
-projectButtons.forEach(button => {
+document.querySelectorAll('.project-button').forEach(button => {
     button.addEventListener('click', () => {
-        window.location.href = 'bot-discord.html';
+        const projectName = button.closest('.project-card').dataset.project;
+        if (projectName) {
+            window.location.href = `${projectName}.html`;
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const projects = document.querySelectorAll(".project-card");
+    projects.forEach((project, index) => {
+        setTimeout(() => {
+            project.classList.add("show");
+        }, index * 200);
     });
 });
