@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertisseur d'unités</title>
+    <link rel="icon" type="image/png" href="../favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="container">
+        <div class="converter">
+            <h2>Convertisseur d'Unités</h2>
+
+            <input type="number" id="inputValue" placeholder="Entrez une valeur" aria-label="Entrez la valeur à convertir">
+
+            <label for="unitType">Type de conversion :</label>
+            <select id="unitType" aria-label="Sélectionnez le type de conversion" onchange="updateUnitOptions()">
+                <option value="longueur">Longueur</option>
+                <option value="poids">Poids</option>
+                <option value="température">Température</option>
+                <option value="volume">Volume</option>
+                <option value="surface">Surface</option>
+                <option value="vitesse">Vitesse</option>
+                <option value="temps">Temps</option>
+                <option value="énergie">Énergie</option>
+                <option value="pression">Pression</option>
+            </select>
+
+            <label for="fromUnit">De :</label>
+            <select id="fromUnit" aria-label="Unité de départ"></select>
+
+            <label for="toUnit">Vers :</label>
+            <select id="toUnit" aria-label="Unité d'arrivée"></select>
+
+            <button onclick="convert()">Convertir</button>
+
+            <p id="result"></p>
+        </div>
+
+        <section class="bot-cta">
+            <a href="../index.html" class="back-button">⬅️ Retour au Portfolio</a>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

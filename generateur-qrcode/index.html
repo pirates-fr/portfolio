@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de QR Code</title>
+    <link rel="icon" type="image/png" href="../favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔗 Générateur de QR Code</h1>
+        <input type="text" id="text" placeholder="Entrez un texte ou une URL">
+        <input type="color" id="color" value="#000000">
+        <button onclick="generateQR()">Générer</button>
+        <div id="qr-container"></div>
+
+        <section class="bot-cta">
+            <a href="../index.html" class="back-button">⬅️ Retour au Portfolio</a>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qr-code-styling/lib/qr-code-styling.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
